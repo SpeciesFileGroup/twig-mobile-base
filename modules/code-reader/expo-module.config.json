@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["CodeReaderModule"]
+  },
+  "android": {
+    "modules": ["org.taxonworks.codereader.CodeReaderModule"]
+  }
+}

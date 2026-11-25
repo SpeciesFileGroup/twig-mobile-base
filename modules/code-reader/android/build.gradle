@@ -1,0 +1,25 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'org.taxonworks.codereader'
+version = '0.1.0'
+
+android {
+  namespace "org.taxonworks.codereader"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+    // Keep rules the app needs when it is minified (see the file)
+    consumerProguardFiles 'proguard-rules.pro'
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  // Bundled model: works offline from the first launch, no Play Services download
+  implementation "com.google.mlkit:barcode-scanning:17.3.0"
+}
