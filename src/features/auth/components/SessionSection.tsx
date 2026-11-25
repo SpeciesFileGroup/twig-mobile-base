@@ -4,7 +4,9 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 
 import { APP_CONFIG } from '@/config'
 import { useSettings } from '@/features/settings'
-import { Row, Section, palette, useAppTheme } from '@/shared/components'
+import { Row, Section } from '@/shared/components'
+import { useAppTheme } from '@/shared/hooks'
+import { palette } from '@/shared/theme'
 
 import { endSession, useSession } from '../store'
 import { formatRemaining } from '../utils/formatRemaining'

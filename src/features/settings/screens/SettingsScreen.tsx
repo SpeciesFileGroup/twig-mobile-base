@@ -3,7 +3,8 @@ import type { ReactNode } from 'react'
 import { ScrollView, StyleSheet, Text } from 'react-native'
 
 import { APP_CONFIG } from '@/config'
-import { palette, useAppTheme } from '@/shared/components'
+import { useAppTheme } from '@/shared/hooks'
+import { palette } from '@/shared/theme'
 
 import { ServerSection } from '../components/ServerSection'
 

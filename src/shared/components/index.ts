@@ -1,5 +1,4 @@
 export { Row, Section, SwitchRow } from './Section'
-export { cameraColors, fonts, palette, type Tone, useAppTheme } from './theme'
 export { BrandSplash } from './BrandSplash'
 export { BusyOverlay } from './BusyOverlay'
 export { HeaderLogo } from './HeaderLogo'

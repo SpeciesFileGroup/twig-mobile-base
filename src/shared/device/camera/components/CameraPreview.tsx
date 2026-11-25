@@ -4,7 +4,7 @@ import { GestureDetector, useCompetingGestures } from 'react-native-gesture-hand
 import Animated, { FadeOut, ZoomIn } from 'react-native-reanimated'
 import { Camera, type CameraRef, useCameraDevice, usePhotoOutput } from 'react-native-vision-camera'
 
-import { cameraColors } from '@/shared/components'
+import { cameraColors } from '@/shared/theme'
 
 import { Rotatable } from './Rotatable'
 import { ZoomControl } from './ZoomControl'

@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet } from 'react-native'
 
-import { cameraColors, Icon, type IconName } from '@/shared/components'
+import { Icon, type IconName } from '@/shared/components'
+import { cameraColors } from '@/shared/theme'
 
 import { Rotatable } from './Rotatable'
 

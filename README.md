@@ -71,10 +71,13 @@ src/
     settings/          persisted preferences (zustand + expo-sqlite kv-store), Home server section
   shared/
     api/               TaxonWorksClient (/api/v1), TaskTokenClient (task_token endpoints), typed errors
-    components/        theme, Icon, Section/Row, IconButton, Toast, BottomSheet, ScreenError, splash,
+    components/        Icon, Section/Row, IconButton, Toast, BottomSheet, ScreenError, splash,
                        header logo
     device/            the phone's hardware and OS: camera/ (VisionCamera preview, permission, zoom,
                        crop, rotation), haptics, files; add others here (e.g. location/)
+    hooks/             React hooks used across features (e.g. useAppTheme), exported from its index.ts
+    theme/             design tokens: colors.ts (palette, cameraColors), fonts.ts; add others here
+                       (e.g. spacing.ts) and export them from its index.ts
     utils/             pure helpers used across features (e.g. messageOf for error messages)
 modules/
   code-reader/         local Expo module: reads QR codes and barcodes from a photo (ML Kit / Vision)
@@ -101,13 +104,14 @@ feature has something for it. To place a function, ask whether it has side effec
 device storage → `data/`, anything else → `services/`.
 
 Modules in `shared/` follow the same layout when they mix kinds of files (e.g. `device/camera/`:
-components, a hook, pure helpers, a service); a folder of one kind (`components/`, `api/`, `utils/`)
-stays flat.
+components, a hook, pure helpers, a service); a folder of one kind (`components/`, `api/`, `hooks/`,
+`theme/`, `utils/`) stays flat. A hook goes in `shared/hooks/` only when it belongs to no module; one
+that does stays in that module (e.g. `device/camera/hooks/`).
 
 Dependencies go one way, `app → features → shared`, and ESLint enforces it:
 
-- a feature, `shared/api` and `shared/device/camera` are imported only through their `index.ts`
-  (`@/features/auth`, `@/shared/api`, never `@/features/auth/…`);
+- a feature, `shared/api`, `shared/device/camera`, `shared/hooks` and `shared/theme` are imported only
+  through their `index.ts` (`@/features/auth`, `@/shared/api`, never `@/features/auth/…`);
 - `shared/` never imports a feature, a route, the database schema or the app config.
 
 ## Building the app's features

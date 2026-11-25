@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
-import { cameraColors } from '@/shared/components'
+import { cameraColors } from '@/shared/theme'
 
 type Props = {
   text: string

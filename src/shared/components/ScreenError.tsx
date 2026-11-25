@@ -1,7 +1,8 @@
 import type { ErrorBoundaryProps } from 'expo-router'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
-import { palette, useAppTheme } from './theme'
+import { useAppTheme } from '@/shared/hooks'
+import { palette } from '@/shared/theme'
 
 export function ScreenError({ error, retry }: ErrorBoundaryProps) {
   const { colors } = useAppTheme()

@@ -3,7 +3,13 @@ const expoConfig = require('eslint-config-expo/flat')
 
 // Modules are used through their public API (index.ts) only
 const publicApiOnly = {
-  group: ['@/features/*/*', '@/shared/api/*', '@/shared/device/camera/*'],
+  group: [
+    '@/features/*/*',
+    '@/shared/api/*',
+    '@/shared/device/camera/*',
+    '@/shared/theme/*',
+    '@/shared/hooks/*',
+  ],
   message: 'Import from the public API (its index.ts) instead of its internals.',
 }
 

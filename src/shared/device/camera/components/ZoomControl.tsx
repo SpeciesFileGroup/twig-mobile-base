@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
 
-import { cameraColors } from '@/shared/components'
+import { cameraColors } from '@/shared/theme'
 
 import type { ZoomValue } from '../hooks/usePinchZoom'
 import { formatZoom, roundZoom } from '../utils/cameraZoom'

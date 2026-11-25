@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react'
 import { StyleSheet, Switch, Text, View } from 'react-native'
 
-import { palette, useAppTheme } from './theme'
+import { useAppTheme } from '@/shared/hooks'
+import { palette } from '@/shared/theme'
 
 type SectionProps = { title?: string; footer?: string; children: ReactNode }
 

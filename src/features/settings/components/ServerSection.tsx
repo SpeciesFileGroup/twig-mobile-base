@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { ActivityIndicator, Button, StyleSheet, Text, TextInput, View } from 'react-native'
 
 import { TaxonWorksClient } from '@/shared/api'
-import { Row, Section, fonts, palette, useAppTheme } from '@/shared/components'
+import { Row, Section } from '@/shared/components'
+import { useAppTheme } from '@/shared/hooks'
+import { fonts, palette } from '@/shared/theme'
 import { messageOf } from '@/shared/utils/errors'
 
 import { updateSettings, useSettings } from '../store'

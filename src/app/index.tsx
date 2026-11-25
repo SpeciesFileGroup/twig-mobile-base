@@ -1,7 +1,9 @@
 import { router, Stack } from 'expo-router'
 import { ScrollView, StyleSheet, Text } from 'react-native'
 
-import { IconButton, fonts, palette, useAppTheme } from '@/shared/components'
+import { IconButton } from '@/shared/components'
+import { useAppTheme } from '@/shared/hooks'
+import { fonts, palette } from '@/shared/theme'
 
 /** Home screen of the template: replace its content with the app's own features */
 export default function HomeRoute() {

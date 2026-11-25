@@ -5,8 +5,10 @@ import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from '
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { scheduleOnRN } from 'react-native-worklets'
 
+import { useAppTheme } from '@/shared/hooks'
+import { palette } from '@/shared/theme'
+
 import { Icon, type IconName } from './Icon'
-import { palette, useAppTheme } from './theme'
 
 export type SheetAction = {
   label: string

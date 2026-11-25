@@ -7,7 +7,7 @@ import CodeReader from '@modules/code-reader'
 
 import { APP_CONFIG } from '@/config'
 import { useSettings } from '@/features/settings'
-import { BusyOverlay, cameraColors, Icon, showToast } from '@/shared/components'
+import { BusyOverlay, Icon, showToast } from '@/shared/components'
 import {
   CameraMessage,
   CameraPreview,
@@ -18,6 +18,7 @@ import {
 } from '@/shared/device/camera'
 import { deleteFile } from '@/shared/device/files'
 import { notify, tap } from '@/shared/device/haptics'
+import { cameraColors } from '@/shared/theme'
 import { messageOf } from '@/shared/utils/errors'
 
 import { ConnectError, connectWithQr } from '../services/connect'

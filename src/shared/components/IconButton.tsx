@@ -1,7 +1,8 @@
 import { Pressable, StyleSheet } from 'react-native'
 
+import { useAppTheme } from '@/shared/hooks'
+
 import { Icon, type IconName } from './Icon'
-import { useAppTheme } from './theme'
 
 type Props = {
   icon: IconName

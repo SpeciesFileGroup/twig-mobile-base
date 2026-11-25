@@ -1,7 +1,7 @@
 import { Image } from 'expo-image'
 import { StyleSheet, View } from 'react-native'
 
-import { useAppTheme } from './theme'
+import { useAppTheme } from '@/shared/hooks'
 
 const SYMBOL = {
   light: require('@assets/images/logo/taxonworks-black-circle.svg'),
